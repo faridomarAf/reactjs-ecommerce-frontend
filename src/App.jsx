@@ -1,9 +1,18 @@
-import React from 'react'
+import React from 'react';
+import {Routes, Route} from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import Register from './pages/(auth)/Register';
+import Login from './pages/(auth)/Login';
+
 
 export default function App() {
   return (
-    <div className='text-5xl text-pink-500'>
-      <h1>Home page</h1>
-    </div>
+    <>
+      <Routes>
+        <Route path='/' element={<HomePage/>}/>
+        <Route path='/login' element={<Login/>}/>
+        <Route path='/register' element={<Register/>}/>
+      </Routes>
+    </>
   )
 }
